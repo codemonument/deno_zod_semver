@@ -22,6 +22,11 @@
      */
   "tasks": {
     "start": "deno run --unstable example/main.ts",
+
+    // NOTE: Increase version here when building a new lib version!
+    "build": "deno run -A scripts/build-for-node.ts 1.0.0",
+
+    // Repo Maintenance Scripts
     "esm:add": "deno run -A https://esm.sh/v111 add",
     "esm:update": "deno run -A https://esm.sh/v111 update",
     "esm:remove": "deno run -A https://esm.sh/v111 remove"
