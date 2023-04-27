@@ -24,7 +24,7 @@
     "start": "deno run --unstable example/main.ts",
 
     // NOTE: Increase version here when building a new lib version!
-    "build": "deno run -A scripts/build-for-node.ts 1.0.0",
+    "build": "deno run -A scripts/build-for-node.ts 1.0.1",
     "publish": "npm publish ./dist-npm",
 
     // Repo Maintenance Scripts
