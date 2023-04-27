@@ -8,8 +8,9 @@ await build({
   entryPoints: ["./mod.ts"],
   outDir: outPath,
   typeCheck: true,
-  test: false,
+  test: true,
   declaration: true,
+  importMap: "import_map.json",
   shims: {
     // see JS docs for overview and more options
     deno: true,
