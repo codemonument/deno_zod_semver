@@ -25,7 +25,7 @@
 
     // NOTE: Increase version here when building a new lib version!
     "build": "deno run -A scripts/build-for-node.ts 1.0.0",
-    "publish": "npm publish dist-npm",
+    "publish": "npm publish ./dist-npm",
 
     // Repo Maintenance Scripts
     "esm:add": "deno run -A https://esm.sh/v111 add",
