@@ -3,7 +3,7 @@
  * which should be used by other people
  */
 
-import { z } from "./deps.ts";
+export { z } from "https://deno.land/x/zod@v3.21.4/mod.ts";
 
 /**
  * This RegEx is able to detect SemVer Strings based on the official specification.
