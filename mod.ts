@@ -17,4 +17,12 @@ import { z } from "https://deno.land/x/zod@v3.21.4/mod.ts";
 export const regexSemverNumbered =
   /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
 
-export const ZodSemver = z.string().regex(regexSemverNumbered);
+export const ZodSemver = z.string().regex(regexSemverNumbered).brand<
+  "ZodSemver"
+>();
+
+/**
+ * Normally, a semver is only a string.
+ * However, we want to make sure that with this type we only get valid semvers, by using Zod branded types.
+ */
+export type ZodSemver = z.infer<typeof ZodSemver>;
