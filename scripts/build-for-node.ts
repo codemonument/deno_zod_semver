@@ -16,9 +16,9 @@ await build({
     deno: true,
   },
   mappings: {
-    "https://deno.land/x/zod@v3.21.4/mod.ts": {
+    "https://deno.land/x/zod@v3.22.2/mod.ts": {
       name: "zod",
-      version: "3.21.4",
+      version: "3.22.2",
     },
   },
   package: {

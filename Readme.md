@@ -51,6 +51,18 @@ See the zod docs for more information: <https://zod.dev/?id=brand>
 
 ## Changelog
 
+### 1.2.0
+
+- upgrade zod to 3.22.2
+- add test for using ZodSemver branded type in an optional union with 'latest' string and with 'latest' as default
+
+As Fallback:
+
+- add `ZodSemverUnbranded` even though it only types to string, but the parsing is still attached and returns string,
+  instead of returning the kind-of-special 'branded' type `ZodSemver`
+  This may allow easier combination with certain context requirements when using this ZodSemver library,
+  for example: using this semver in a union with "latest"
+
 ### 1.1.0
 
 - Added the branded type `ZodSemver` for use in functions that require a parsed semver string

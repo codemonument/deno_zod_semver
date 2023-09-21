@@ -2,6 +2,7 @@
   "imports": {
     "@/": "./",
     "std_testing": "./test/utils/std_testing.ts",
+    "zod": "https://deno.land/x/zod@v3.22.2/mod.ts",
     "dnt": "https://deno.land/x/dnt@0.34.0/mod.ts",
     "tsd": "https://esm.sh/v132/*tsd@0.28.1"
   },
