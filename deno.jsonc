@@ -7,7 +7,7 @@
   // publish to jsr via `deno publish`
   "name": "@codemonument/zod-semver",
   "version": "1.0.3",
-  "exports": "./mod.ts",
+  "exports": "./mod.jsr.ts",
 
   // TS Compiler Options
   "lock": false,
