@@ -4,32 +4,31 @@
  * - can be expanded as needed to configure integrated tsc, linter and formatter
  */
 {
-  /**
-     * TS Compiler Options
-     */
+  // TS Compiler Options
+  "lock": false,
   "compilerOptions": {
     "strict": true
   },
 
-  /**
-     *  IMPORTANT: Only use import_map.json for testing dependencies,
-     since it will not be resolved when mod.ts is used as library from outside!
-     */
-  "importMap": "import_map.json",
+  //  IMPORTANT: Only use import_map.json for testing dependencies,
+  //  since it will not be resolved when mod.ts is used as library from outside!
+  "imports": {
+    "@/": "./",
+    "std_testing": "./test/utils/std_testing.ts",
+    "zod": "https://deno.land/x/zod@v3.22.4/mod.ts",
+    "dnt": "https://deno.land/x/dnt@0.40.0/mod.ts",
+    "tsd": "https://esm.sh/tsd@0.30.5"
+  },
+  "test": {
+    "exclude": ["dist-npm", "node_modules"]
+  },
 
-  /**
-     * Docs for Deno Tasks: https://deno.land/manual@v1.27.1/tools/task_runner
-     */
   "tasks": {
-    "start": "deno run --unstable example/main.ts",
+    "start": "deno run example/main.ts",
+    "test": "deno test --coverage --failfast",
 
     // NOTE: Increase version here when building a new lib version!
     "build": "deno run -A scripts/build-for-node.ts 1.0.2",
-    "publish": "npm publish ./dist-npm",
-
-    // Repo Maintenance Scripts
-    "esm:add": "deno run -A https://esm.sh/v132 add",
-    "esm:update": "deno run -A https://esm.sh/v132 update",
-    "esm:remove": "deno run -A https://esm.sh/v132 remove"
+    "publish": "npm publish ./dist-npm"
   }
 }
