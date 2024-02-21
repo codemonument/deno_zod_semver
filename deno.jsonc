@@ -6,7 +6,7 @@
 {
   // publish to jsr via `deno publish`
   "name": "@codemonument/zod-semver",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "exports": "./mod.jsr.ts",
   "exclude": [
     "dist-npm",
@@ -45,7 +45,7 @@
     "echo": "echo \"$INIT_CWD\"",
 
     // NOTE: Increase version here when building a new lib version!
-    "build": "deno run -A scripts/build-for-node.ts 1.3.0",
+    "build": "deno run -A scripts/build-for-node.ts 1.3.1",
     "publish-npm": "npm publish ./dist-npm",
     "publish-jsr": "deno publish --no-zap"
   }
