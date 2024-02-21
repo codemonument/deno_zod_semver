@@ -1,7 +1,13 @@
 # Zod SemVer
 
 A simple deno module by @codemonument with a zod schema for validating semver.
-Uses official regex and is cross-posted to npm as zod-semver.
+Uses official regex.
+
+Published to:
+
+- [deno.land](https://deno.land/x/zod_semver)
+- [npm](https://www.npmjs.com/package/zod-semver)
+- [jsr](https://jsr.io/@codemonument/zod-semver/)
 
 ## Usage
 
