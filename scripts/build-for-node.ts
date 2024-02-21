@@ -7,18 +7,19 @@ await emptyDir(outPath);
 await build({
   entryPoints: ["./mod.ts"],
   outDir: outPath,
-  typeCheck: true,
+  typeCheck: false,
   test: true,
-  declaration: true,
-  importMap: "import_map.json",
+  declaration: "separate",
+  importMap: "deno.jsonc",
   shims: {
     // see JS docs for overview and more options
     deno: true,
   },
   mappings: {
-    "https://deno.land/x/zod@v3.22.2/mod.ts": {
+    "https://deno.land/x/zod@v3.22.4/mod.ts": {
       name: "zod",
-      version: "3.22.2",
+      version: "3.22.4",
+      peerDependency: true,
     },
   },
   package: {
@@ -34,9 +35,6 @@ await build({
     },
     bugs: {
       url: "https://github.com/codemonument/deno_zod_semver/issues",
-    },
-    peerDependencies: {
-      "zod": "~3.21.0",
     },
   },
 });
