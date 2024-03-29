@@ -5,8 +5,9 @@ Uses official regex.
 
 Published to:
 
-- [jsr](https://jsr.io/@codemonument/zod-semver/)
-- [npm](https://www.npmjs.com/package/zod-semver)
+- [![JSR](https://jsr.io/badges/@codemonument/zod-semver)](https://jsr.io/@codemonument/zod-semver/)
+- [![NPM Version](https://img.shields.io/npm/v/zod-semver?style=flat&logo=npm&color=CB3435)
+  ](https://www.npmjs.com/package/zod-semver)
 - ⚠️ ~~[deno.land](https://deno.land/x/zod_semver)~~ (not anymore, use the jsr package: `jsr:@codemonument/zod-semver`!)
 
 ## Usage
