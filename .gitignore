@@ -4,7 +4,7 @@ dist/*
 !dist/.gitkeep
 .DS_Store
 
-dist-npm
+dist/npm
 
 coverage/*
 !coverage/.gitkeep

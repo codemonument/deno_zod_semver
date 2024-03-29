@@ -1,6 +1,6 @@
 import { build, emptyDir } from "@deno/dnt";
 
-const outPath = `./dist-npm`;
+const outPath = `./dist/npm`;
 
 await emptyDir(outPath);
 
