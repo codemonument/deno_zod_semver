@@ -1,4 +1,4 @@
-import { build, emptyDir } from "dnt";
+import { build, emptyDir } from "@deno/dnt";
 
 const outPath = `./dist-npm`;
 
@@ -9,16 +9,16 @@ await build({
   outDir: outPath,
   typeCheck: false,
   test: true,
-  declaration: "separate",
   importMap: "deno.jsonc",
+  packageManager: "bun",
   shims: {
     // see JS docs for overview and more options
     deno: true,
   },
   mappings: {
-    "https://deno.land/x/zod@v3.22.4/mod.ts": {
+    "npm:zod@^3.22.4": {
       name: "zod",
-      version: "3.22.4",
+      version: "^3.22.4",
       peerDependency: true,
     },
   },
@@ -37,8 +37,10 @@ await build({
       url: "https://github.com/codemonument/deno_zod_semver/issues",
     },
   },
+  postBuild() {
+    // post build steps
+    Deno.copyFileSync("LICENSE", `${outPath}/LICENSE`);
+    Deno.copyFileSync("README.md", `${outPath}/README.md`);
+  
+  }
 });
-
-// post build steps
-Deno.copyFileSync("LICENSE", `${outPath}/LICENSE`);
-Deno.copyFileSync("README.md", `${outPath}/README.md`);
