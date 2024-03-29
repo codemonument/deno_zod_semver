@@ -4,49 +4,50 @@
  * - can be expanded as needed to configure integrated tsc, linter and formatter
  */
 {
-  // publish to jsr via `deno publish`
-  "name": "@codemonument/zod-semver",
-  "version": "1.3.1",
-  "exports": "./mod.jsr.ts",
-  "exclude": [
-    "dist-npm",
-    "node_modules",
-    "dist",
-    "example",
-    "test",
-    "scripts",
-    ".vscode",
-    "coverage"
-  ],
+	// publish to jsr via `deno publish`
+	"name": "@codemonument/zod-semver",
+	"version": "1.3.1",
+	"exports": "./mod.jsr.ts",
+	"exclude": [
+		"dist-npm",
+		"node_modules",
+		"dist",
+		"example",
+		"test",
+		"scripts",
+		".vscode",
+		"coverage"
+	],
 
-  // TS Compiler Options
-  "lock": false,
-  "compilerOptions": {
-    "strict": true
-  },
+	// TS Compiler Options
+	"lock": false,
+	"compilerOptions": {
+		"strict": true
+	},
 
-  //  IMPORTANT: Only use import_map.json for testing dependencies,
-  //  since it will not be resolved when mod.ts is used as library from outside!
-  "imports": {
-    "@/": "./",
-    "std_testing": "./test/utils/std_testing.ts",
-    "zod": "https://deno.land/x/zod@v3.22.4/mod.ts",
-    "dnt": "https://deno.land/x/dnt@0.40.0/mod.ts",
-    "tsd": "https://esm.sh/tsd@0.30.5"
-  },
-  "test": {
-    "exclude": ["dist-npm", "node_modules"]
-  },
+	//  IMPORTANT: Only use import_map.json for testing dependencies,
+	//  since it will not be resolved when mod.ts is used as library from outside!
+	"imports": {
+		"@/": "./",
+		"std_testing": "./test/utils/std_testing.ts",
+		"zod": "https://deno.land/x/zod@v3.22.4/mod.ts",
+		"dnt": "https://deno.land/x/dnt@0.40.0/mod.ts",
+		"tsd": "https://esm.sh/tsd@0.30.5"
+	},
+	"test": {
+		"exclude": ["dist-npm", "node_modules"]
+	},
 
-  "tasks": {
-    "start": "deno run example/main.ts",
-    "test": "deno test --coverage --failfast",
+	"tasks": {
+		"start": "deno run example/main.ts",
+		"test": "deno test --coverage --failfast",
 
-    "echo": "echo \"$INIT_CWD\"",
+		"echo": "echo \"$INIT_CWD\"",
 
-    // NOTE: Increase version here when building a new lib version!
-    "build": "deno run -A scripts/build-for-node.ts 1.3.1",
-    "publish-npm": "npm publish ./dist-npm",
-    "publish-jsr": "deno publish --no-zap"
-  }
+		// NOTE: Increase version here when building a new lib version!
+		"build": "deno run -A scripts/build-for-node.ts 1.3.1",
+		"publish-npm": "npm publish ./dist-npm",
+		"publish-jsr": "deno publish --no-zap",
+		"convert-to-jsr": "deno run -Ar jsr:@deno/x-to-jsr"
+	}
 }
