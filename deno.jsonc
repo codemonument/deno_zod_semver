@@ -39,16 +39,14 @@
     "exclude": ["dist-npm", "node_modules"]
   },
   "publish": {
-    "exclude": [
-      "dist-npm",
-      "node_modules",
-      "dist",
-      "example",
-      "test",
-      "scripts",
-      ".vscode",
-      "coverage",
-      ".DS_Store"
+    "include": [
+      "README.md",
+      "CHANGELOG.md",
+      "LICENSE",
+      "mod.ts",
+      "deno.jsonc"
+      // Not publishing deno.lock to allow the user of this package greate flexibility
+      // "deno.lock"
     ]
   }
 }
