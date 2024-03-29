@@ -15,7 +15,8 @@
     "example",
     "scripts",
     ".vscode",
-    "coverage"
+    "coverage",
+    ".DS_Store"
   ],
 
   "tasks": {
