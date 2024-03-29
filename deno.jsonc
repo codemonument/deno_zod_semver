@@ -48,6 +48,7 @@
 		"build": "deno run -A scripts/build-for-node.ts 1.3.1",
 		"publish-npm": "npm publish ./dist-npm",
 		"publish-jsr": "deno publish --no-zap",
+		"publish-dry": "deno publish --no-zap --dry-run",
 		"convert-to-jsr": "deno run -Ar jsr:@deno/x-to-jsr"
 	}
 }
