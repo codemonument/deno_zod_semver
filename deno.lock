@@ -11,8 +11,7 @@
       "jsr:@std/fmt@^0.221.0": "jsr:@std/fmt@0.221.0",
       "jsr:@std/fs@^0.218.2": "jsr:@std/fs@0.218.2",
       "jsr:@std/io@^0.218.2": "jsr:@std/io@0.218.2",
-      "jsr:@std/json@^0.221.0": "jsr:@std/json@0.221.0",
-      "jsr:@std/jsonc@^0.221.0": "jsr:@std/jsonc@0.221.0",
+      "jsr:@std/jsonc": "jsr:@std/jsonc@0.221.0",
       "jsr:@std/path@^0.218.2": "jsr:@std/path@0.218.2",
       "jsr:@std/testing@^0.221.0": "jsr:@std/testing@0.221.0",
       "npm:@ts-morph/bootstrap@0.22": "npm:@ts-morph/bootstrap@0.22.0",
@@ -72,14 +71,10 @@
           "jsr:@std/bytes@^0.218.2"
         ]
       },
-      "@std/json@0.221.0": {
-        "integrity": "3e63d5fe37c5256b9db345d42c11b57c850aa501bc6464d310e4836b85631b5e"
-      },
       "@std/jsonc@0.221.0": {
         "integrity": "097f41a228cf9959a1de4f7638a0cc81a69d6580766f6c84a32959429501f284",
         "dependencies": [
-          "jsr:@std/assert@^0.221.0",
-          "jsr:@std/json@^0.221.0"
+          "jsr:@std/assert@^0.221.0"
         ]
       },
       "@std/path@0.218.2": {
@@ -2319,7 +2314,6 @@
     "dependencies": [
       "jsr:@deno/dnt@^0.41.1",
       "jsr:@std/assert@^0.221.0",
-      "jsr:@std/jsonc@^0.221.0",
       "jsr:@std/log@^0.221.0",
       "jsr:@std/testing@^0.221.0",
       "npm:tsd@^0.30.7",
