@@ -5,7 +5,7 @@ const outPath = `./dist/npm`;
 await emptyDir(outPath);
 
 await build({
-  entryPoints: ["./mod.ts"],
+  entryPoints: ["./src/main.ts"],
   outDir: outPath,
   typeCheck: false,
   test: true,
@@ -41,6 +41,5 @@ await build({
     // post build steps
     Deno.copyFileSync("LICENSE", `${outPath}/LICENSE`);
     Deno.copyFileSync("README.md", `${outPath}/README.md`);
-  
-  }
+  },
 });
