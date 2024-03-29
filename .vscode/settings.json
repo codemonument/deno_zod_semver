@@ -1,5 +1,5 @@
 {
   "deno.enable": true,
   "deno.lint": true,
-  "deno.disablePaths": ["dist-npm"]
+  "deno.disablePaths": ["dist/npm"]
 }
