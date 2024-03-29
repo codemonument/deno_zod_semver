@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.3
+
+- document all the exported symbols
+
 ## 1.3.2
 
 - unpublish from deno.land
