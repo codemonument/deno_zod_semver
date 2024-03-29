@@ -8,17 +8,6 @@
   "name": "@codemonument/zod-semver",
   "version": "1.3.1",
   "exports": "./mod.ts",
-  "exclude": [
-    "dist-npm",
-    "node_modules",
-    "dist",
-    "example",
-    "scripts",
-    ".vscode",
-    "coverage",
-    ".DS_Store"
-  ],
-
   "tasks": {
     "start": "deno run example/main.ts",
     "test": "deno test --coverage --failfast",
@@ -32,12 +21,10 @@
     "publish-dry": "deno publish --allow-slow-types --dry-run",
     "convert-to-jsr": "deno run -Ar jsr:@deno/x-to-jsr"
   },
-
   // TS Compiler Options
   "compilerOptions": {
     "strict": true
   },
-
   //  IMPORTANT: You can use import maps for libraries, but only when publishing to jsr, NOT deno.land/x!
   "imports": {
     "@/": "./",
@@ -50,5 +37,18 @@
   },
   "test": {
     "exclude": ["dist-npm", "node_modules"]
+  },
+  "publish": {
+    "exclude": [
+      "dist-npm",
+      "node_modules",
+      "dist",
+      "example",
+      "test",
+      "scripts",
+      ".vscode",
+      "coverage",
+      ".DS_Store"
+    ]
   }
 }
