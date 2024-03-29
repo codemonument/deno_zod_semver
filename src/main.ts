@@ -13,17 +13,33 @@ import { z } from "zod";
  * If it reports false positives or false negatives, please check the website for an update!
  * See here: https://semver.org/#is-there-a-suggested-regular-expression-regex-to-check-a-semver-string
  */
-export const regexSemverNumbered =
+export const regexSemverWithNumberedCaptureGroups =
   /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
 
-export const ZodSemverUnbranded = z.string().regex(regexSemverNumbered);
+/**
+ * This ZodSchema is able to detect SemVer Strings based on the official specification and types its output as "string".
+ */
+export const ZodSemverUnbranded = z.string().regex(
+  regexSemverWithNumberedCaptureGroups,
+);
+
+/**
+ * The inferred type of the ZodSemverUnbranded schema.
+ */
+export type ZodSemverUnbranded = z.infer<typeof ZodSemverUnbranded>;
+
+/**
+ * Normally, a semver is only a string.
+ * However, sometimes we want to use a semver string as a parameter somewhere and make sure that it is a valid semver,
+ * without having to parse it again.
+ * Therefore we can provide Semver as a branded zod type, which means,
+ * that this type will be recognized by typescript as if it where it's own class, and not only a string.
+ */
 export const ZodSemver = ZodSemverUnbranded.brand<
   "ZodSemver"
 >();
 
 /**
- * Normally, a semver is only a string.
- * However, we want to make sure that with this type we only get valid semvers, by using Zod branded types.
+ * The inferred type of the ZodSemver schema.
  */
-export type ZodSemverUnbranded = z.infer<typeof ZodSemverUnbranded>;
 export type ZodSemver = z.infer<typeof ZodSemver>;
