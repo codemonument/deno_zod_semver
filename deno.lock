@@ -2309,7 +2309,10 @@
       }
     }
   },
-  "remote": {},
+  "remote": {
+    "https://deno.land/x/simple_exec@1.0.1/lib/simple_exec.ts": "245188c25135bbf26c53f1cb5dcc9cb12a4661241a8683e471f50c915f9dbcba",
+    "https://deno.land/x/simple_exec@1.0.1/mod.ts": "8a4d2efb253c32a81858dc07adcc819d21369f3b3ef283935bd9b294a9ef0fdd"
+  },
   "workspace": {
     "dependencies": [
       "jsr:@deno/dnt@^0.41.1",
