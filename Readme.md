@@ -64,3 +64,13 @@ See the zod docs for more information: <https://zod.dev/?id=brand>
 | Git Repo | https://github.com/codemonument/deno_zod_semver |
 | JSR      | https://jsr.io/@codemonument/zod-semver/        |
 | NPM      | https://www.npmjs.com/package/zod-semver        |
+
+## Create new version of this package (for maintainers)
+
+1. Update version property in deno.jsonc
+2. Update version passed to `deno task build`
+3. Update CHANGELOG.md with your changes
+4. Run `deno task publish-dry` & check output
+5. Run `deno task build`
+6. Run `deno task publish`
+7. Commit changes and add git tag
