@@ -13,7 +13,6 @@
     "node_modules",
     "dist",
     "example",
-    "test",
     "scripts",
     ".vscode",
     "coverage"
@@ -48,7 +47,7 @@
     "@std/testing": "jsr:@std/testing@^0.221.0",
     "std_testing": "./test/utils/std_testing.ts",
     "tsd": "https://esm.sh/tsd@0.30.5",
-    "zod": "https://deno.land/x/zod@v3.22.4/mod.ts"
+    "zod": "npm:zod@^3.22.4"
   },
   "test": {
     "exclude": ["dist-npm", "node_modules"]
