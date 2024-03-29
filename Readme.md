@@ -70,7 +70,8 @@ See the zod docs for more information: <https://zod.dev/?id=brand>
 1. Update version property in deno.jsonc
 2. Update version passed to `deno task build`
 3. Update CHANGELOG.md with your changes
-4. Run `deno task publish-dry` & check output
-5. Run `deno task build`
-6. Run `deno task publish`
-7. Commit changes and add git tag
+4. Run `deno task build`
+5. Commit changes
+6. Run `deno task publish-dry` & check output
+7. Run `deno task publish`
+8. Add git tag for your version
