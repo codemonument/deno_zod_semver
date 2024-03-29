@@ -34,7 +34,6 @@
   },
 
   // TS Compiler Options
-  "lock": false,
   "compilerOptions": {
     "strict": true
   },
