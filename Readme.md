@@ -1,14 +1,15 @@
 # Zod SemVer
 
+[![JSR](https://jsr.io/badges/@codemonument/zod-semver)](https://jsr.io/@codemonument/zod-semver/)
+[![NPM Version](https://img.shields.io/npm/v/zod-semver?style=flat&logo=npm&color=CB3435)
+](https://www.npmjs.com/package/zod-semver)
+
 A simple deno module by @codemonument with a zod schema for validating semver.
 Uses official regex.
 
-Published to:
-
-- [![JSR](https://jsr.io/badges/@codemonument/zod-semver)](https://jsr.io/@codemonument/zod-semver/)
-- [![NPM Version](https://img.shields.io/npm/v/zod-semver?style=flat&logo=npm&color=CB3435)
-  ](https://www.npmjs.com/package/zod-semver)
-- ⚠️ ~~[deno.land](https://deno.land/x/zod_semver)~~ (not anymore, use the jsr package: `jsr:@codemonument/zod-semver`!)
+> [!WARNING]
+> Not published to ~~[deno.land/x/zod_semver](https://deno.land/x/zod_semver)~~ anymore! Use the jsr package instead:  
+> `jsr:@codemonument/zod-semver`!
 
 ## Usage
 
