@@ -43,10 +43,10 @@
 	//  since it will not be resolved when mod.ts is used as library from outside!
 	"imports": {
 		"@/": "./",
+		"@deno/dnt": "jsr:@deno/dnt@^0.41.1",
 		"std_testing": "./test/utils/std_testing.ts",
-		"zod": "https://deno.land/x/zod@v3.22.4/mod.ts",
-		"dnt": "https://deno.land/x/dnt@0.40.0/mod.ts",
-		"tsd": "https://esm.sh/tsd@0.30.5"
+		"tsd": "https://esm.sh/tsd@0.30.5",
+		"zod": "https://deno.land/x/zod@v3.22.4/mod.ts"
 	},
 	"test": {
 		"exclude": ["dist-npm", "node_modules"]
