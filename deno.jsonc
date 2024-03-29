@@ -16,7 +16,7 @@
 
     // NOTE: Increase version here when building a new lib version!
     "build": "deno run -A scripts/dnt-build.ts 1.3.1",
-    "publish-npm": "npm publish ./dist-npm",
+    "publish-npm": "npm publish ./dist/npm",
     "publish-jsr": "deno publish --allow-slow-types",
     "publish-dry": "deno publish --allow-slow-types --dry-run",
     "convert-to-jsr": "deno run -Ar jsr:@deno/x-to-jsr"
