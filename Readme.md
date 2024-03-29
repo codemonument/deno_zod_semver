@@ -5,19 +5,27 @@ Uses official regex.
 
 Published to:
 
-- [deno.land](https://deno.land/x/zod_semver)
-- [npm](https://www.npmjs.com/package/zod-semver)
 - [jsr](https://jsr.io/@codemonument/zod-semver/)
+- [npm](https://www.npmjs.com/package/zod-semver)
+- ⚠️ ~~[deno.land](https://deno.land/x/zod_semver)~~ (not anymore, use the jsr package: `jsr:@codemonument/zod-semver`!)
 
 ## Usage
 
 ### Import in Deno
 
+```bash
+deno add @codemonument/zod-semver
+```
+
 ```ts
-import {ZodSemver} from 'https://deno.land/x/zod_semver/mod.ts';
+import {ZodSemver} from '@codemonument/zod-semver';
 ```
 
 ### Import in Node
+
+```bash
+npm add @codemonument/zod-semver
+```
 
 ```ts
 import {ZodSemver} from 'zod-semver';
@@ -52,10 +60,15 @@ See the zod docs for more information: <https://zod.dev/?id=brand>
 | Name     | Target                                          |
 | -------- | ----------------------------------------------- |
 | Git Repo | https://github.com/codemonument/deno_zod_semver |
-| Deno     | https://deno.land/x/zod_semver                  |
+| JSR      | https://jsr.io/@codemonument/zod-semver/        |
 | NPM      | https://www.npmjs.com/package/zod-semver        |
 
 ## Changelog
+
+### 1.3.0 & 1.3.1
+
+- sync deno.land and npm
+- upgrade dependencies
 
 ### 1.2.0
 
