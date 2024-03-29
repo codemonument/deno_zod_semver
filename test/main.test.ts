@@ -1,9 +1,9 @@
 import { describe, it } from "@std/testing/bdd";
 import { assert, assertThrows } from "@std/assert";
-import { regexSemverNumbered, ZodSemver } from "@/mod.ts";
+import { regexSemverNumbered, ZodSemver } from "@/src/main.ts";
 import { z } from "zod";
 
-describe(`mod.ts`, () => {
+describe(`main.ts`, () => {
   it(`should export correct objects and types`, () => {
     assert(regexSemverNumbered);
     assert(ZodSemver);
