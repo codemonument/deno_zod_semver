@@ -13,14 +13,14 @@ import { z } from "zod";
  * If it reports false positives or false negatives, please check the website for an update!
  * See here: https://semver.org/#is-there-a-suggested-regular-expression-regex-to-check-a-semver-string
  */
-export const regexSemverWithNumberedCaptureGroups =
+export const regexSemverNumberedGroups =
   /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
 
 /**
  * This ZodSchema is able to detect SemVer Strings based on the official specification and types its output as "string".
  */
 export const ZodSemverUnbranded = z.string().regex(
-  regexSemverWithNumberedCaptureGroups,
+  regexSemverNumberedGroups,
 );
 
 /**
