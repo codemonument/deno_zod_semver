@@ -2,8 +2,7 @@
  * Export all functionality of your module here,
  * which should be used by other people
  */
-
-import { z } from "npm:zod@3.22.4";
+import { z } from "zod";
 
 /**
  * This RegEx is able to detect SemVer Strings based on the official specification.
