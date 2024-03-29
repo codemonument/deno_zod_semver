@@ -1,4 +1,5 @@
-import { assert, assertThrows, describe, it } from "std_testing";
+import { describe, it } from "@std/testing/bdd";
+import { assert, assertThrows } from "@std/assert";
 import { regexSemverNumbered, ZodSemver } from "@/mod.ts";
 import { z } from "zod";
 
