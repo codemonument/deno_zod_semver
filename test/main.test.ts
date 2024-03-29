@@ -1,11 +1,11 @@
 import { describe, it } from "@std/testing/bdd";
 import { assert, assertThrows } from "@std/assert";
-import { regexSemverNumbered, ZodSemver } from "@/src/main.ts";
+import { regexSemverWithNumberedCaptureGroups, ZodSemver } from "@/src/main.ts";
 import { z } from "zod";
 
 describe(`main.ts`, () => {
   it(`should export correct objects and types`, () => {
-    assert(regexSemverNumbered);
+    assert(regexSemverWithNumberedCaptureGroups);
     assert(ZodSemver);
   });
 
