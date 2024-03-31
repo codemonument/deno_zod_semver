@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.7 - 2023-04-01
+
+- fix casing of Readme.md in build-dnt
+
 ## 1.3.6 - 2023-04-01
 
 - refine release script for gh actions
