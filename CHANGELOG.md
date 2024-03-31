@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.8 - 2023-04-01
+
+- Fix README Casing for jsr
+
 ## 1.3.7 - 2023-04-01
 
 - fix casing of Readme.md in build-dnt
