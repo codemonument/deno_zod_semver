@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.4
+
+- release latest version after implementing version update with @codemonument/update-denoconfig
+
 ## 1.3.3
 
 - document all the exported symbols

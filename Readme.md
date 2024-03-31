@@ -67,12 +67,10 @@ See the zod docs for more information: <https://zod.dev/?id=brand>
 
 ## Create new version of this package (for maintainers)
 
-1. Update version property in deno.jsonc
-2. Update version passed to `deno task build`
-3. Update CHANGELOG.md with your changes
-4. Run `deno task test`
-5. Run `deno task build`
-6. Commit changes
-7. Run `deno task publish-dry` & check output
-8. Run `deno task publish`
-9. Add git tag for your version
+1. Run `deno task build <newVersion>`
+2. Update CHANGELOG.md with your changes
+3. Run `deno task test`
+4. Commit changes
+5. Run `deno task publish-dry` & check output
+6. Run `deno task publish`
+7. Add git tag for your version
