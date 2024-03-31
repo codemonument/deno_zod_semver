@@ -67,10 +67,8 @@ See the zod docs for more information: <https://zod.dev/?id=brand>
 
 ## Create new version of this package (for maintainers)
 
-1. Run `deno task build <newVersion>`
-2. Update CHANGELOG.md with your changes
+1. Update CHANGELOG.md with your changes
+2. Run `deno task uv <newVersion>`
 3. Run `deno task test`
-4. Commit changes
-5. Run `deno task publish-dry` & check output
-6. Run `deno task publish`
-7. Add git tag for your version
+4. Commit changes & add git tag for your version
+5. Push changes & tags => github actions will deploy

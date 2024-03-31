@@ -23,7 +23,7 @@ jobs:
           deno-version: '~1.42'
       - uses: oven-sh/setup-bun@v1
       - run: deno task test
-      - run: deno task build ${{ github.ref_name }}
+      - run: deno task build-dnt ${{ github.ref_name }}
       - run: deno task publish-dry
       - run: deno task publish
         env:

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.6 - 2023-04-01
+
+- refine release script for gh actions
+
 ## 1.3.5 - 2023-04-01
 
 - setup github actions
