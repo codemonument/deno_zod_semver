@@ -1,5 +1,11 @@
 import { build, emptyDir } from "@deno/dnt";
 
+// Script requires the new version as first argument
+const version = Deno.args[0];
+if (version === undefined) {
+  throw new Error("Pass a semver as first argument!");
+}
+
 const outPath = `./dist/npm`;
 
 await emptyDir(outPath);

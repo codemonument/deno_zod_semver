@@ -16,6 +16,8 @@
 
     // NOTE: Increase version here when building a new lib version!
     "build": "deno run -A ./scripts/build.ts",
+    "build-dnt": "deno run -A ./scripts/build-dnt.ts",
+    "update-version": "deno run -A ./scripts/update-version.ts",
     "publish": "deno task publish-npm && deno task publish-jsr",
     "publish-dry": "deno publish --allow-slow-types --dry-run",
     "publish-jsr": "deno publish --allow-slow-types",
