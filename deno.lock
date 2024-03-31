@@ -2,6 +2,7 @@
   "version": "3",
   "packages": {
     "specifiers": {
+      "jsr:@codemonument/update-denoconfig": "jsr:@codemonument/update-denoconfig@0.1.0",
       "jsr:@deno/cache-dir@^0.8.0": "jsr:@deno/cache-dir@0.8.0",
       "jsr:@deno/dnt@^0.41.1": "jsr:@deno/dnt@0.41.1",
       "jsr:@std/assert@^0.218.2": "jsr:@std/assert@0.218.2",
@@ -11,17 +12,33 @@
       "jsr:@std/fmt@^0.221.0": "jsr:@std/fmt@0.221.0",
       "jsr:@std/fs@^0.218.2": "jsr:@std/fs@0.218.2",
       "jsr:@std/io@^0.218.2": "jsr:@std/io@0.218.2",
+      "jsr:@std/json@^0.221.0": "jsr:@std/json@0.221.0",
       "jsr:@std/jsonc": "jsr:@std/jsonc@0.221.0",
+      "jsr:@std/jsonc@^0.221.0": "jsr:@std/jsonc@0.221.0",
       "jsr:@std/path@^0.218.2": "jsr:@std/path@0.218.2",
+      "jsr:@std/path@^0.221.0": "jsr:@std/path@0.221.0",
       "jsr:@std/testing@^0.221.0": "jsr:@std/testing@0.221.0",
+      "jsr:@std/url@^0.221.0": "jsr:@std/url@0.221.0",
       "npm:@ts-morph/bootstrap@0.22": "npm:@ts-morph/bootstrap@0.22.0",
       "npm:code-block-writer@^13.0.1": "npm:code-block-writer@13.0.1",
+      "npm:deepmerge-ts@^5.1.0": "npm:deepmerge-ts@5.1.0",
       "npm:jscodeshift": "npm:jscodeshift@0.9.0_@babel+preset-env@7.24.3__@babel+core@7.24.3_@babel+core@7.24.3",
       "npm:json5": "npm:json5@2.2.3",
       "npm:json5-writer": "npm:json5-writer@0.2.0",
+      "npm:json5-writer@^0.2.0": "npm:json5-writer@0.2.0",
       "npm:zod@^3.22.4": "npm:zod@3.22.4"
     },
     "jsr": {
+      "@codemonument/update-denoconfig@0.1.0": {
+        "integrity": "efb8946f16287c1a7428258108785bc21eebdc21b04aab7251f5afce8c7218e0",
+        "dependencies": [
+          "jsr:@std/jsonc@^0.221.0",
+          "jsr:@std/url@^0.221.0",
+          "npm:deepmerge-ts@^5.1.0",
+          "npm:json5-writer@^0.2.0",
+          "npm:zod@^3.22.4"
+        ]
+      },
       "@deno/cache-dir@0.8.0": {
         "integrity": "e87e80a404958f6350d903e6238b72afb92468378b0b32111f7a1e4916ac7fe7",
         "dependencies": [
@@ -71,10 +88,14 @@
           "jsr:@std/bytes@^0.218.2"
         ]
       },
+      "@std/json@0.221.0": {
+        "integrity": "3e63d5fe37c5256b9db345d42c11b57c850aa501bc6464d310e4836b85631b5e"
+      },
       "@std/jsonc@0.221.0": {
         "integrity": "097f41a228cf9959a1de4f7638a0cc81a69d6580766f6c84a32959429501f284",
         "dependencies": [
-          "jsr:@std/assert@^0.221.0"
+          "jsr:@std/assert@^0.221.0",
+          "jsr:@std/json@^0.221.0"
         ]
       },
       "@std/path@0.218.2": {
@@ -83,8 +104,17 @@
           "jsr:@std/assert@^0.218.2"
         ]
       },
+      "@std/path@0.221.0": {
+        "integrity": "0a36f6b17314ef653a3a1649740cc8db51b25a133ecfe838f20b79a56ebe0095"
+      },
       "@std/testing@0.221.0": {
         "integrity": "d9b5ed7d5dc4e8d193734a594e7f80c04a5a6f34c2493e69c6713ae7fe6f880e"
+      },
+      "@std/url@0.221.0": {
+        "integrity": "ff19961e6ef86c934cffb788a3e8cd1db7460729c88acf6d5cd4daab52cfa1ad",
+        "dependencies": [
+          "jsr:@std/path@^0.221.0"
+        ]
       }
     },
     "npm": {
@@ -1389,6 +1419,10 @@
       },
       "decode-uri-component@0.2.2": {
         "integrity": "sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==",
+        "dependencies": {}
+      },
+      "deepmerge-ts@5.1.0": {
+        "integrity": "sha512-eS8dRJOckyo9maw9Tu5O5RUi/4inFLrnoLkBe3cPfDMx3WZioXtmOew4TXQaxq7Rhl4xjDtR7c6x8nNTxOvbFw==",
         "dependencies": {}
       },
       "define-property@0.2.5": {
