@@ -10,6 +10,9 @@ if (version === undefined) {
 
 ZodSemver.parse(version);
 
+console.log("Building version", version);
+console.log("CWD", Deno.cwd());
+
 const dntBuild = await simpleExec("deno", [
   "run",
   "-A",
@@ -17,11 +20,23 @@ const dntBuild = await simpleExec("deno", [
   version,
 ]);
 
+console.log("\n==dnt stdout==\n", dntBuild.stdout);
+console.log("\n==dnt stderr==\n", dntBuild.stderr);
+
 // update-denoconfig --config ./deno.jsonc --kv.version=1.0.0 --kv.tasks.echo=\"echo \\\"Hello World!\\\"\"
 // install this cli by: deno install -g jsr:@codemonument/update-denoconfig
-const versionUpdate = await simpleExec("update-denoconfig", [
-  "--config=./deno.jsonc",
-  `--kv.version=${version}`,
-]);
+// example command: update-denoconfig --config=deno.jsonc --kv.version=1.0.0
+// deno run --allow-read=.,deno.jsonc --allow-write=.,deno.jsonc --allow-net=jsr.io jsr:@codemonument/update-denoconfig@1.0.6 --config ./deno.jsonc --kv.version=1.0.0 --kv.tasks.echo=\"echo \\\"Hello World!\\\"\"
 
-console.log({ dntBuild, versionUpdate });
+const denoVersionUpdateCommand =
+  `run --allow-read=.,deno.jsonc --allow-write=.,deno.jsonc --allow-net=jsr.io jsr:@codemonument/update-denoconfig@1.0.6 --config ./deno.jsonc --kv.version=${version}`
+    .split(" ");
+
+const versionUpdate = await simpleExec("deno", denoVersionUpdateCommand);
+
+if (versionUpdate.stderr === "" && versionUpdate.stdout === "") {
+  console.log("Version updated to ", version);
+} else {
+  console.log("version update stdout", versionUpdate.stdout);
+  console.log("version update stderr", versionUpdate.stderr);
+}
