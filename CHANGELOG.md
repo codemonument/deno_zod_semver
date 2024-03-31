@@ -3,6 +3,7 @@
 ## 1.3.8 - 2023-04-01
 
 - Fix README Casing for jsr
+- add @module documentation in main.ts
 
 ## 1.3.7 - 2023-04-01
 

@@ -1,7 +1,9 @@
 /**
- * Export all functionality of your module here,
- * which should be used by other people
+ * @module
+ * This is the main module for the deno module "zod-semver".
+ * See usage examples in the README.md
  */
+
 import { z } from "zod";
 
 /**
