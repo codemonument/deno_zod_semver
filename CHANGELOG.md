@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.5 - 2023-04-01
+
+- setup github actions
+
 ## 1.3.4
 
 - release latest version after implementing version update with @codemonument/update-denoconfig
